@@ -1,0 +1,23 @@
+Artifact logging: This feature will log the uri of the file or data that you want it to log. It will then show up in User Interface under that specific run, it’s extremely useful for keeping dependencies between pipeline steps low. Of course that’s not the only thing it’s good for. 
+Metric logging: This part of the tracking function is extremely useful for logging training scores along with validation scores. It can log a metric and you can then plot a graph by just selecting the metric in the User Interface.
+
+WHAT IS MLFLOW?
+MLFlow is a platform that allows you to manage end-to-end machine learning lifecycles, and it has 4 main functions
+-	Tracking
+-	Project packaging
+-	Managing and deployment
+-	Model registration and management
+
+Terms and what they mean:
+-	MLFlow Experiment: An experiment is a way to organize different trials and or mlruns. It allows you to categorize runs and their statistics/metrics and artifacts under one category. It allows you to have different testing and production experiments, so you can have them seperated. 
+-	MLFlow Run (mlrun): A Mlrun is a sort of trail / single execution of the machine learning pipeline (Don’t know about pipelines? Click here)
+-	Artifacts: An artifact is a relative uri that mlflow can store which points directly to the object/file. This means that in the MLFlow UI you can actually see the file you asked it to save/log to that specific mlrun
+
+MLFlow as a platform
+MLFlow provides a lot of different tools for better managing the lifecycle of a machine learning pipelines (Don’t know about pipelines? Click here). Tools such as the above mentioned 4 main functions, in those 4 functions there are smaller tools that can help you. What is also extremely useful is that MLFlow is library-agnostic, this means that it can be used with any machine learning library, along with the fact that you can use it with any programming language since every function can be called from a REST API
+One notable feature is the user interface which is part of the tracking function. It gives you a visible overview of the different mlruns
+
+Another really useful feature that is included in the same tracking function, is the artifact logging and metric logging. 
+“An Awesome tool for making maintanence on Machine learning models easy”
+CORE CONCEPTS
+The core concepts of MLFlow is making a reusable and reproducible machine learning package. You can make it highly specialized for one purpose, or you can make it extremely generic so it serves as a form of template for future projects that use Machine Learning.
