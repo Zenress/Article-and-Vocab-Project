@@ -16,6 +16,6 @@ A Machine Learning Model is a file that through training with an algorithm, can 
 
 Is an algorithm that functions by making a yes/no (e.g., bigger than/less than) condition that continually split the dataset until it finds a sequence of nodes that points to a class in your dataset. It repeats the process until conditions that point to your classes are done
 
-## Continuous Integration and Continuous Deployment
+## Continuous Integration
 
-Continuous integration is the practice of continuously merging different branch
+Continuous integration is the practice of continuously merging different branches of a source control platform to ensure that the version people are working on are also up to date to eachothers changes. This helps a lot with making sure you don't get huge amounts of merging conflicts when merging big projects.
