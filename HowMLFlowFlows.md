@@ -1,6 +1,21 @@
 # How MLFlow Flows
 
-## WHAT IS MLFLOW?
+- [How MLFlow Flows](#how-mlflow-flows)
+  - [What is Mlflow?](#what-is-mlflow)
+  - [MLFlow as a Platform](#mlflow-as-a-platform)
+  - [Core Concepts](#core-concepts)
+  - [Project Run Command](#project-run-command)
+    - [**Project URI**](#project-uri)
+      - [*Local*](#local)
+    - [**Project version**](#project-version)
+    - [**Entry Point**](#entry-point)
+    - [**Parameters**](#parameters)
+    - [**Deployment Mode**](#deployment-mode)
+    - [**Environment**](#environment)
+  - [Tracking UI](#tracking-ui)
+  - [Afterword](#afterword)
+
+## What is Mlflow?
 
 MLFlow is a platform that allows you to manage end-to-end machine learning lifecycles, and it has 4 main functions
 
@@ -15,28 +30,34 @@ Terms and what they mean:
 - MLFlow Run (mlrun): A Mlrun is a sort of trail / single execution of the machine learning pipeline (Don’t know about pipelines? Click [here](https://c3.ai/glossary/machine-learning/machine-learning-pipeline/#:~:text=A%20machine%20learning%20pipeline%20is,model%20parameters%2C%20and%20prediction%20outputs.))
 - Artifacts: An artifact is a relative uri that mlflow can store which points directly to the object/file. This means that in the MLFlow UI you can actually see the file you asked it to save/log to that specific mlrun
 
-## MLFlow as a platform
+## MLFlow as a Platform
 
-MLFlow provides a lot of different tools for better managing the lifecycle of a machine learning pipeline (Don’t know about pipelines? Click here). Tools such as the above mentioned 4 main functions, in those 4 functions there are smaller tools that can help you. What is also extremely useful is that MLFlow is library-agnostic, this means that it can be used with any machine learning library, along with the fact that you can use it with any programming language since every function can be called from a REST API
-One notable feature is the user interface which is part of the tracking function. It gives you a visible overview of the different mlruns
+MLFlow provides a lot of different tools for better managing the lifecycle of a machine learning pipeline. Tools such as the above mentioned 4 main functions, in those 4 functions there are smaller tools that can help you. What is also extremely useful is that MLFlow is library-agnostic, this means that it can be used with any machine learning library, along with the fact that you can use it with any programming language since every function can be called from a REST API
+One notable feature is the user interface which is part of the tracking function. It gives you a visible overview of the different mlruns, which is extremely useful for keeping track of how your model training is going and what the results are.
 
 Another really useful feature that is included in the same tracking function, is the artifact logging and metric logging.
 
-- Artifact logging: This feature will log the uri of the file or data that you want it to log. It will then show up in User Interface under that specific run, it’s extremely useful for keeping dependencies between pipeline steps low. Of course that’s not the only thing it’s good for.
+- **Artifact logging**: This feature will log the uri of the file or data that you want it to log. It will then show up in User Interface under that specific run, it’s extremely useful for keeping dependencies between pipeline steps low. Of course that’s not the only thing it’s good for.
 
-- Metric logging: This part of the tracking function is extremely useful for logging training scores along with validation scores. It can log a metric and you can then plot a graph by just selecting the metric in the User Interface.
+- **Metric logging:** This part of the tracking function is extremely useful for logging training scores along with validation scores. It can log a metric and you can then plot a graph by just selecting the metric in the User Interface.
 
-## CORE CONCEPTS
+## Core Concepts
 
-The core concepts of MLFlow is
+The 2 core concepts of MLFlow is
 
 - Making a reusable and reproducible machine learning package. You can make it highly specialized for one purpose, or you can make it extremely generic so it serves as a form of template for future projects that use Machine Learning.
 - Making the machine learning workflow the least restrictive it can be, by allowing all machine learning libraries and whatever language you want to be used.
-- 
 
-## Project run command
 
-There are a lot of different parameters used in the command used to run the pipeline, I will explain some of the more important ones:
+## Project Run Command
+
+There are a lot of different parameters used in the command used to run the pipeline, some very easy to understand and some that can be quite difficult to understand or grasp. Therefore i will give you an example of how a typical run command might look more often than not, so you don't get confused by the amount of parameters that are usable:
+
+```console
+mlflow run iris-pipeline
+```
+
+I will explain some of the more important ones:
 
 ### **Project URI**
 
@@ -50,7 +71,7 @@ The options for what the project uri can be is
 
 In this tutorial's case we will focus only on local running. To learn more about how the different parameters works and what's allowed go to MLFlows [Documentation](https://mlflow.org/docs/latest/projects.html#running-projects)
 
-#### Local
+#### *Local*
 
 The Local URI is just the folder path to the pipeline from where you are executing the run command from. This means if you are running the pipeline from the project root folder, then it's the path from the root folder to the pipeline
 
@@ -73,3 +94,13 @@ This is used to specify where the run is executed, you run it from a local machi
 ### **Environment**
 
 This is used to force MLFlow to use another environment than the one that was specified in the mlprojects file. There are uses for this but I have not yet needed to use this for the overall run command (I use the code version of environment specification when starting a step)
+
+## Tracking UI
+
+There is a very awesome tracking UI as mentioned in this [section](#mlflow-as-a-platform)
+
+The way the tracking ui can be used is of course to see the things you asked Mlflow to track, as well as the different Mlruns that you have made. You can compare metrics and parameters that you saved to the run with other runs.
+
+## Afterword
+
+Thank you very much for reading this article and i hope you got just a little bit of knowledge on MLflow out of this...
