@@ -1,0 +1,75 @@
+# How MLFlow Flows
+
+## WHAT IS MLFLOW?
+
+MLFlow is a platform that allows you to manage end-to-end machine learning lifecycles, and it has 4 main functions
+
+- Tracking
+- Project packaging
+- Managing and deployment
+- Model registration and management
+
+Terms and what they mean:
+
+- MLFlow Experiment: An experiment is a way to organize different trials and or mlruns. It allows you to categorize runs and their statistics/metrics and artifacts under one category. It allows you to have different testing and production experiments, so you can have them seperated.
+- MLFlow Run (mlrun): A Mlrun is a sort of trail / single execution of the machine learning pipeline (Don’t know about pipelines? Click [here](https://c3.ai/glossary/machine-learning/machine-learning-pipeline/#:~:text=A%20machine%20learning%20pipeline%20is,model%20parameters%2C%20and%20prediction%20outputs.))
+- Artifacts: An artifact is a relative uri that mlflow can store which points directly to the object/file. This means that in the MLFlow UI you can actually see the file you asked it to save/log to that specific mlrun
+
+## MLFlow as a platform
+
+MLFlow provides a lot of different tools for better managing the lifecycle of a machine learning pipeline (Don’t know about pipelines? Click here). Tools such as the above mentioned 4 main functions, in those 4 functions there are smaller tools that can help you. What is also extremely useful is that MLFlow is library-agnostic, this means that it can be used with any machine learning library, along with the fact that you can use it with any programming language since every function can be called from a REST API
+One notable feature is the user interface which is part of the tracking function. It gives you a visible overview of the different mlruns
+
+Another really useful feature that is included in the same tracking function, is the artifact logging and metric logging.
+
+- Artifact logging: This feature will log the uri of the file or data that you want it to log. It will then show up in User Interface under that specific run, it’s extremely useful for keeping dependencies between pipeline steps low. Of course that’s not the only thing it’s good for.
+
+- Metric logging: This part of the tracking function is extremely useful for logging training scores along with validation scores. It can log a metric and you can then plot a graph by just selecting the metric in the User Interface.
+
+## CORE CONCEPTS
+
+The core concepts of MLFlow is
+
+- Making a reusable and reproducible machine learning package. You can make it highly specialized for one purpose, or you can make it extremely generic so it serves as a form of template for future projects that use Machine Learning.
+- Making the machine learning workflow the least restrictive it can be, by allowing all machine learning libraries and whatever language you want to be used.
+- 
+
+## Project run command
+
+There are a lot of different parameters used in the command used to run the pipeline, I will explain some of the more important ones:
+
+### **Project URI**
+
+The project uri is used to identify where the project you are trying to run is located, there are some specific things you can do with the project uri as well.
+
+The options for what the project uri can be is
+
+- Local URI
+- Github URI
+- Git over SSH URI
+
+In this tutorial's case we will focus only on local running. To learn more about how the different parameters works and what's allowed go to MLFlows [Documentation](https://mlflow.org/docs/latest/projects.html#running-projects)
+
+#### Local
+
+The Local URI is just the folder path to the pipeline from where you are executing the run command from. This means if you are running the pipeline from the project root folder, then it's the path from the root folder to the pipeline
+
+### **Project version**
+
+This is for Git-based projects. You can use the commit hash or branch name of the Git repository to specify which version you wanna run
+
+### **Entry Point**
+
+You can choose to specify a specific step to start the pipeline on or just leave it empty. (The default is main. So if you wanted to write that just leave it out). This is especially useful if you have a step that faills and want to figure out how many of the other steps would fail as well.
+
+### **Parameters**
+
+They are something you use for different purposes and it’s a longer paragraf just to explain what they are and how to specify them. It’s useful for passing settings you might want to enable or disable through, e.g enabling error detection (if it’s setup)
+
+### **Deployment Mode**
+
+This is used to specify where the run is executed, you run it from a local machine yes, but in many cases you would just use the local machine to queue a run on Databricks or a similar cluster or computing infrastructure.
+
+### **Environment**
+
+This is used to force MLFlow to use another environment than the one that was specified in the mlprojects file. There are uses for this but I have not yet needed to use this for the overall run command (I use the code version of environment specification when starting a step)
