@@ -5,13 +5,13 @@
   - [MLFlow as a Platform](#mlflow-as-a-platform)
   - [Core Concepts](#core-concepts)
   - [Project Run Command](#project-run-command)
-    - [**Project URI**](#project-uri)
-      - [*Local*](#local)
-    - [**Project version**](#project-version)
-    - [**Entry Point**](#entry-point)
-    - [**Parameters**](#parameters)
-    - [**Deployment Mode**](#deployment-mode)
-    - [**Environment**](#environment)
+    - [Project URI](#project-uri)
+      - [Local](#local)
+    - [Project version](#project-version)
+    - [Entry Point](#entry-point)
+    - [Parameters](#parameters)
+    - [Deployment Mode](#deployment-mode)
+    - [Environment](#environment)
   - [Tracking UI](#tracking-ui)
   - [Afterword](#afterword)
 
@@ -48,7 +48,6 @@ The 2 core concepts of MLFlow is
 - Making a reusable and reproducible machine learning package. You can make it highly specialized for one purpose, or you can make it extremely generic so it serves as a form of template for future projects that use Machine Learning.
 - Making the machine learning workflow the least restrictive it can be, by allowing all machine learning libraries and whatever language you want to be used.
 
-
 ## Project Run Command
 
 There are a lot of different parameters used in the command used to run the pipeline, some very easy to understand and some that can be quite difficult to understand or grasp. Therefore i will give you an example of how a typical run command might look more often than not, so you don't get confused by the amount of parameters that are usable:
@@ -59,7 +58,7 @@ mlflow run iris-pipeline
 
 I will explain some of the more important ones:
 
-### **Project URI**
+### Project URI
 
 The project uri is used to identify where the project you are trying to run is located, there are some specific things you can do with the project uri as well.
 
@@ -71,27 +70,27 @@ The options for what the project uri can be is
 
 In this tutorial's case we will focus only on local running. To learn more about how the different parameters works and what's allowed go to MLFlows [Documentation](https://mlflow.org/docs/latest/projects.html#running-projects)
 
-#### *Local*
+#### Local
 
 The Local URI is just the folder path to the pipeline from where you are executing the run command from. This means if you are running the pipeline from the project root folder, then it's the path from the root folder to the pipeline
 
-### **Project version**
+### Project version
 
 This is for Git-based projects. You can use the commit hash or branch name of the Git repository to specify which version you wanna run
 
-### **Entry Point**
+### Entry Point
 
 You can choose to specify a specific step to start the pipeline on or just leave it empty. (The default is main. So if you wanted to write that just leave it out). This is especially useful if you have a step that faills and want to figure out how many of the other steps would fail as well.
 
-### **Parameters**
+### Parameters
 
 They are something you use for different purposes and it’s a longer paragraf just to explain what they are and how to specify them. It’s useful for passing settings you might want to enable or disable through, e.g enabling error detection (if it’s setup)
 
-### **Deployment Mode**
+### Deployment Mode
 
 This is used to specify where the run is executed, you run it from a local machine yes, but in many cases you would just use the local machine to queue a run on Databricks or a similar cluster or computing infrastructure.
 
-### **Environment**
+### Environment
 
 This is used to force MLFlow to use another environment than the one that was specified in the mlprojects file. There are uses for this but I have not yet needed to use this for the overall run command (I use the code version of environment specification when starting a step)
 
