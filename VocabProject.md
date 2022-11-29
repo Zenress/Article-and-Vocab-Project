@@ -15,7 +15,7 @@
     - [Hyperparameter](#hyperparameter)
   - [11-15](#11-15)
     - [Pandas library](#pandas-library)
-    - [Databricks Cluster API](#databricks-cluster-api)
+    - [API](#api)
     - [Supervised learning](#supervised-learning)
     - [Black-box model](#black-box-model)
     - [White-box model](#white-box-model)
@@ -30,15 +30,20 @@
 
 ### Offline Holdout set
 
-An Offline Holdout set is a dataset that was set aside locally during runtime. This is also known as a test set, it was originally part of the dataset that was split into training and testing. The offline in the word means that the test set is available locally but not on a cloud.
+An Offline Holdout set is a dataset that was set aside locally during runtime.
+This is also known as a test set, it was originally part of the dataset that was split into training and testing.
+The offline in the word means that the test set is available locally but not on a cloud.
 
 ### Machine Learning Pipeline
 
-A Machine Learning pipeline is the definition of the entire process from getting the dataset to training a model and then delivering it. It consists of different steps that together make an automated process from start to end. Meaning as long as you give it data and start it, it will complete fully on it's own.
+A Machine Learning pipeline is the definition of the entire process from getting the dataset to training a model and then delivering it.
+It consists of different steps that together make an automated process from start to end.
+Meaning as long as you give it data and start it, it will complete fully on it's own.
 
 ### Machine Learning Model
 
-A Machine Learning Model is an expression of a trained algorithm that was trained using data. It can recognize certain types of patterns and predict the result using these patterns.
+A Machine Learning Model is an expression of a trained algorithm that was trained using data.
+It can recognize certain types of patterns and predict the result using these patterns.
 The specific patterns and what it can predict depends on what algorithm you use.
 
 ### Decision Tree Classifier
@@ -67,7 +72,7 @@ It does this by modelling the relationship between to variables and estimating t
 ### Runtime
 
 Is the term for the period in which a computer program is executing.
-It is essentially when the program is running.
+It is essentially when the program is running. So Runtime version is the notation of what Version the runtime is.
 
 ### Single-node Databrick cluster
 
@@ -84,42 +89,67 @@ Things like how many layers in a DecisionTree, or which regularization method to
 
 ### Pandas library
 
-Is a data manipulation and analysis tool, that's open source as well. It's used to handle data in both simple and complex ways. E.g. things like reading a dataset, performing data transformations on columns and such.
+Is a data manipulation and analysis tool, that's open source as well. It's used to handle data in both simple and complex ways.
+E.g. things like reading a dataset, performing data transformations on columns and such.
 
-### Databricks Cluster API
+### API
 
-awdad
+An API is a way for two or more programs to interact with eachother. It stands for Application Programming Interface and is extremely useful when you need an output for something, but don't need the entire program to run.
+So calling an API to fetch the specific data or answer you are looking for will drastically reduce time.
+Of course you need to have built the program for that though
 
 ### Supervised learning
 
-As a sub category of machine learning, supervised learning focuses on classifying data or predicting outcomes using labaled datasets. The given model then needs to figure out how to get the answer that is needed using the labeled dataset
+As a sub category of machine learning, supervised learning focuses on classifying data or predicting outcomes using labaled datasets.
+The given model then needs to figure out how to get the answer that is needed using the labeled dataset
 
 ### Black-box model
 
-It's essentially a model where it's harder to understand and fully grasp how the model works inside. It's a challenge to understand how the features interact and which ones are important for the output.
+It's essentially a model where it's harder to understand and fully grasp how the model works inside.
+It's a challenge to understand how the features interact and which ones are important for the output.
+In contrast to white-box algorithms, the accuracy of a black-box algorithm is incredible.
+The complexity of the model let's it understand more of the patterns that make up the problem
 
 ### White-box model
 
-Is the opposite of blackbox model. It's easier to understand and interpret, however therein it lacks the complex understanding of datasets that black box models such as neural networks have.
+Is the opposite of blackbox model.
+It's easier to understand and interpret, however therein it lacks the complex understanding of datasets that black box models such as neural networks have.
+Meaning the accuracy of the model will be less than that of the black-box model.
+This is a trade-off you make for the reduced complexity
 
 ## 16-20
 
 ### Neural Network Weight Bias
 
-Assuming you know what Neural Networks are and weights. The bias is a number meant to offset weights between nodes, this bias can be set by a human or the computer itself when back propogating. Bias is often involved in trying to make a model lean towards a certain result
+Assuming you know what Neural Networks are and weights.
+The bias is a number meant to offset weights between nodes, this bias can be set by a human or the computer itself when back propogating.
+Bias is often involved in trying to make a model lean towards a certain result.
+Let's say it's consistently 0.1% off when calculating chances, giving it a bias to offset that will make the result exactly what you want without having to deep dive into the algorithm
 
 ### REST API
 
-a
+Representational state transfer, is an API that follows a loose set of rules.
+These API's will only qualify as a REST API (also called RESTful API) when they follow the rules set by the communication standard.
+This means that if it breaks some of the rules in a major way, then it is not qualified.
+The rules are simple and loose in terms of interpretation but still sturdy in the qualifications
 
 ### JSON
 
-JavaScript Object Notation is a lightweight format meant for storing and moving data. It's setup specifically to be interpretable for a pc and as such often serves as a way of logging errors. The reason for that is that you can make a pc/algorithm read and categorize the errors by different values. It's format looks alot like dictionaries and can most often be ingested entirely like that.
+JavaScript Object Notation is a lightweight format meant for storing and moving data.
+It's setup specifically to be interpretable for a pc and as such often serves as a way of logging errors.
+The reason for that is that you can make a pc/algorithm read and categorize the errors by different values.
+It's format looks alot like dictionaries and can most often be ingested entirely like that.
 
 ### Reinforcement learning
 
-a
+Is a way of maximizing the result by giving the algorithm rewards or punishments depending on if the action it took is good or bad.
+This works really well for teaching something specific, like how to drive a car.
+It's not about making the algorithm take only rewarding choices, but teaching it what is a good risk, and what isn't.
+This results in a trained algorithm that can make calculated and seemingly smart choices.
 
 ### Unsupervised learning
 
-a
+Using a given algorithm unsupervised learning can analyse and cluster unlabeled datasets.
+This can result in the discovery of hidden patterns or data groupings.
+An example of this is finding that there is actually a grouping of amount of accidents to age.
+Meaning it discovered that there is a pattern between amount of accidents to age.
