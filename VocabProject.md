@@ -48,7 +48,7 @@ The specific patterns and what it can predict depends on what algorithm you use.
 
 ### Decision Tree Classifier
 
-Is an algorithm that functions by making a pyes/no (e.g., bigger than/less than) condition that continually split the dataset until it finds a sequence of nodes that points to a class in your dataset.
+Is an algorithm that functions by making a yes/no (e.g., bigger than/less than) condition that continually split the dataset until it finds a sequence of nodes that points to a class in your dataset.
 It repeats the process until conditions that point to your classes are done.
 
 ### Continuous Integration
