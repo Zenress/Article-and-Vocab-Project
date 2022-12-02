@@ -20,9 +20,10 @@ We basically followed the steps on the spatial analysis page from Microsoft
 
 https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/spatial-analysis-container?tabs=virtual-machine
 
-Warnings noticed: 
+Warnings noticed:
 
 From Xshfo1806-VirtualMachine-EdgeDevice_$edgeHub_Logs.txt
+
 - <4> 2022-11-30 12:54:08.560 +00:00 [WRN] - Empty edge hub configuration received. Ignoring...
 - <4> 2022-11-30 12:54:09.450 +00:00 [WRN] - Overriding address(es) '"http://+:80"'. Binding to endpoints defined in "UseKestrel()" instead.
 
