@@ -18,7 +18,10 @@ This section is meant to describe what we did.
 
 We basically followed the steps on the spatial analysis page from Microsoft
 
-https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/spatial-analysis-container?tabs=virtual-machine
+[Microsoft Azure Spatial Analysis documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/spatial-analysis-container?tabs=virtual-machine)
+
+The Spatial analysis failed on the step called:  
+**Validate that the deployment is successful**
 
 Warnings noticed:
 
