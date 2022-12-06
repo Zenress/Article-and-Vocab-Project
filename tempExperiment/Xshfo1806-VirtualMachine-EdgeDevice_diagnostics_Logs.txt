@@ -1,8 +1,0 @@
-2022-11-30T12:56:09.7077249+00:00 <Info> 4 [Launcher] Default log level set to Information
-2022-11-30T12:56:09.7108593+00:00 <info> 101 [Launcher] Connected to docker sock.
-2022-11-30T12:56:09.7112009+00:00 <info> 101 [Launcher] Connected to Azure Log Analutics Workspace <LOGANALYTICS_WORKSPACE_ID>
-2022-11-30T12:56:09.7113169+00:00 <info> 101 [Launcher] Set connection change handler
-2022-11-30T12:56:10.2461553+00:00 <info> 101 [Launcher] Connection Status Changed to Connected
-2022-11-30T12:56:10.2462178+00:00 <info> 101 [Launcher] Connection Status Changed Reason is Connection_Ok
-2022-11-30T12:56:10.2865014+00:00 <info> 101 [Launcher] Bind direct method echo
-2022-11-30T12:56:10.2866734+00:00 <info> 101 [Launcher] Bind direct method getRTCVLogs
